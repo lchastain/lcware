@@ -1,0 +1,6 @@
+Common development operations:
+
+Upload to heroku (lcware.herokuapp.com):
+-------------------------------------------
+0.  Update at gitHub  (git push)
+1.  

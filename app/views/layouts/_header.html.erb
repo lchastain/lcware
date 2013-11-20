@@ -1,0 +1,71 @@
+<header class="navbar navbar-fixed-top">
+  <div class="navbar-inner">
+    <div class="container">
+      <%= image_tag "spawn_logo.png", :alt => "SpawnLabs", :id => "logo"  %>
+      <nav>
+        <ul class="nav pull-right">
+            <li><%= link_to "Dashboard",  dashboard_path %></li>
+            <li style="position: relative; left: -14px;" class="dropdown">
+              <a href="#"  class="dropdown-toggle" data-toggle="dropdown" >
+                  <b class="caret" style="font-size: 0;"></b>
+              </a>
+              <!-- Dashboard -->
+              <!--suppress HtmlUnknownAttribute -->
+              <ul class="dropdown-menu" role="menu" aria-labelledby="dropdownMenu">
+                  <li><%= link_to ddtext(:games),      spawn_ruby_games_path %>  </li>
+                  <li><%= link_to ddtext(:users),      spawn_ruby_users_path %>
+                  <li><%= link_to ddtext(:invitations), spawn_ruby_invitations_path %>
+                  <li><%= link_to ddtext(:sessions),   spawn_ruby_playsessions_path %>
+                  <li><%= link_to ddtext(:states),    gamenodes_states_path %>
+                  <li class="pull-right"><%= link_to ddtext(:installed),    installed_gamenodes_path %>
+                  <li class="pull-right"><%= link_to ddtext(:homeless),    homeless_path %>
+              </ul>
+
+          <!-- Games -->
+          <li class="dropdown" style="position:relative">
+              <a href="#"  class="dropdown-toggle" data-toggle="dropdown" >Games <b class="caret"></b></a>
+              <!--suppress HtmlUnknownAttribute -->
+              <ul class="dropdown-menu" role="menu" aria-labelledby="dropdownMenu">
+                  <li><%= link_to "Games",      spawn_ruby_games_path %>  </li>
+                  <li><%= link_to "Rovi",      rovi_path %>  </li>
+              </ul>
+          </li>
+
+          <!-- Tables -->
+          <li class="dropdown" style="position:relative">
+              <a href="#"  class="dropdown-toggle" data-toggle="dropdown" >Tables <b class="caret"></b></a>
+              <!--suppress HtmlUnknownAttribute -->
+              <ul class="dropdown-menu" role="menu" aria-labelledby="dropdownMenu">
+                  <li><%= link_to ddtext(:datacenters),     spawn_ruby_datacenters_path %>
+                  <li><%= link_to ddtext(:racks),      spawn_ruby_server_racks_path %>  </li>
+                  <li><%= link_to ddtext(:chassis),    spawn_ruby_chassis_index_path %>  </li>
+                  <li><%= link_to ddtext(:blades),     spawn_ruby_mmcs_path %>  </li>
+                  <li><%= link_to ddtext(:gamenodes),  spawn_ruby_gamenodes_path %>  </li>
+                  <li><%= link_to ddtext(:mpus),       mpu_list_path %>  </li>
+                  <li><%= link_to ddtext(:apus),       apu_list_path %>  </li>
+                  <li><%= link_to ddtext(:firewalls),     spawn_ruby_media_firewalls_path %>
+                  <li><%= link_to ddtext(:dumps),     spawn_ruby_dumps_path %>
+                  <li><%= link_to ddtext(:pupdates),     spawn_ruby_product_updates_path %>
+              </ul>
+          </li>
+
+          <li><%= link_to "Invitations",spawn_ruby_invitations_path %>
+          <li><%= link_to "My Logs",    my_logs_path %></li>
+          <li><%= link_to "Jobs",       spawn_ruby_jobs_path %>
+          <li><%= link_to "Logout", "", :id => 'logout-link' %>
+        </ul>
+      </nav>
+    </div>
+  </div>
+</header>
+
+<% unless @suppress_prototype %>
+    <!-- Some pages use 3rd-party jQuery plugins that are not compatible with prototype -->
+    <script type="text/javascript">
+        // white balloon with default configuration
+        // (see http://www.wormbase.org/wiki/Balloon_Tooltips)
+
+        // Initialization of the popup tooltip container, for all (other) pages.
+        var balloon = new Balloon();
+    </script>
+<% end %>

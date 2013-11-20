@@ -2,5 +2,5 @@ Common development operations:
 
 Upload to heroku (lcware.herokuapp.com):
 -------------------------------------------
-0.  Update at gitHub  (git push)
-1.  
+0.  Update git, both local and at gitHub  (git push)
+1.  git push heroku master

@@ -1,0 +1,49 @@
+/* universal */
+
+html {
+  overflow-y: scroll;
+}
+
+body {
+  padding-top: 60px;
+  margin: 8px;
+}
+
+section {
+  overflow: auto;
+}
+
+textarea {
+  resize: vertical;
+}
+
+.navbar .nav.pull-right {
+}
+
+img {
+  padding: 5px;
+}
+
+.center {
+  text-align: center;
+}
+
+.container {
+  width: auto;
+}
+
+.center h1 {
+  margin-bottom: 10px;
+}
+
+.navbar-inner {
+  height: 20px;
+}
+
+#logo {
+  position:absolute;
+  height:40px;
+  width:140px;
+  top: -2px;
+}
+

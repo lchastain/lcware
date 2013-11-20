@@ -4,3 +4,16 @@ Upload to heroku (lcware.herokuapp.com):
 -------------------------------------------
 0.  Update git, both local and at gitHub  (git push)
 1.  git push heroku master
+2.  heroku run rake db:migrate
+
+
+
+What was done to add twitter bootstrap -
+At the rails root, two command-lines:
+------------------------------------------
+gem install twitter-bootstrap-rails
+rails generate bootstrap:install static
+
+
+
+

@@ -41,5 +41,5 @@ group :production do
   gem 'rails_12factor', '0.0.2'
 end
 
-
+gem "twitter-bootstrap-rails", "~> 2.2.8"
 

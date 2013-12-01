@@ -60,4 +60,8 @@ Lcware::Application.routes.draw do
   # match ':controller(/:action(/:id))(.:format)'
 
   root to: 'projects#index'
+
+  match '/resume',      to: 'application#resumay'
+  match '/myblog',      to: 'application#myblog'
+
 end

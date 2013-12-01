@@ -1,0 +1,274 @@
+<% provide(:title, 'Resume') %>
+
+<p style="text-align:center;">
+    <span style="font-family:Cursive, serif;font-size:24px;font-style:normal;font-weight:bold;
+            text-decoration:none;text-transform:none;color:#0033CC;">
+        Donald Lee Chastain
+    </span>
+</p>
+<hr style="width:100%; height: 4px; color:#000000; background-color: black" />
+
+<h4>
+    Summary Description
+</h4>
+Accomplished senior software engineer with over 26 years of technical experience, exhibiting strong
+analytical and organizational skills, likes to learn new technologies, takes ownership of assignments
+and drives for results.  A creative and personable team player who has developed solutions in a wide
+range of programming languages, for various operating systems.
+<br>
+<br>
+<!-- Images inside of hidden divs, that may be shown later -->
+<div style="display: none;" id='uop_diploma' >
+    <%= image_tag("uop_ms.jpg") %>
+</div>
+<div style="display: none;" id='csulb_diploma' >
+    <%= image_tag("csulb_bs.jpg") %>
+</div>
+<div style="display: none;" id='rsc_as' >
+    <%= image_tag("rsc_as.jpg") %>
+</div>
+<div style="display: none;" id='rsc_aa' >
+    <%= image_tag("rsc_aa.jpg") %>
+</div>
+
+<!-- Education -->
+<h4 onmouseover="balloon.showTooltip(event, 'See my bio page for details of earlier course work');">
+    Education
+</h4>
+<ul style="margin-bottom: 0; padding-bottom: 0">
+    <li onmouseover="balloon.showTooltip(event, 'load:uop_diploma');">
+        MS Computer Information Systems, University of Phoenix - Tucson, AZ 1996
+    </li>
+    <li onmouseover="balloon.showTooltip(event, 'load:csulb_diploma');">
+        BS Computer Science and Mathematics, California State University Long Beach, CA 1990
+    </li>
+    <li>
+        <span onmouseover="balloon.showTooltip(event, 'load:rsc_as');">
+            AS Math
+        </span>
+        &
+        <span onmouseover="balloon.showTooltip(event, 'load:rsc_aa');">
+            AA Liberal Arts,
+        </span>
+        <span onmouseover="balloon.showTooltip(event,
+                'This was `Santa Ana College` when I first started working on these degrees');">
+            Rancho Santiago College, Santa Ana, CA 1987
+        </span>
+    </li>
+</ul>
+
+<br>
+
+<!-- Experience -->
+<h4 onmouseover="balloon.showTooltip(event, 'Warning - nested accordions ahead.');">
+    Experience
+</h4>
+
+<div class="panel-group" id="accordion">
+    <div class="panel panel-default">
+
+    <!-- Job 1 -->
+        <div class="panel-heading" style="padding-top:0; padding-bottom: 6px;">
+            <h5 style="padding-top:0; padding-bottom: 0; margin-top: 0; margin-bottom: 0">
+                <a data-toggle="collapse" data-target="#collapseOne">
+                    Senior Software Engineer at Spawn Labs (A GameStop company)    7/2011 – present
+                </a>
+            </h5>
+        </div>
+        <div id="collapseOne" class="panel-collapse collapse">
+            <div class="panel-body" style="padding-top: 0;">
+                In the design and development of a new cloud-gaming service, I served as the DevOps engineer
+                primarily responsible for management views and alerts.  The service is scalable from hundreds
+                of simultaneous users to many thousands, and gives us same-minute visibility of actionable
+                service issues, with informative alert emails containing links to relevant logs and a
+                management web site that ties together the views of our custom hardware and shows its
+                real-time status as well as historical performance data.  I added the management pages to our
+                Ruby/Rails web site, wrote servlets for an additional Jersey server with a REST API, used
+                linux servers running first CentOS and later Ubuntu, automated package installations with
+                Chef, collected and indexed logs with logstash and viewed them with elasticsearch and kibana
+                – these are all examples of some of the open source software that I first evaluated and then
+                integrated into the system.  Testing during development was key, because only by having a
+                robust set of test data could all the new functionality be developed and proven.  Unit tests
+                are run automatically (by Jenkins) at the end of the build process (kicked off by source code
+                changes when received at the GitHub repository), and some of the integration tests were
+                reusable as runtime monitoring scripts, and were added to the alerting system either as
+                icinga/nagios plugins or by running them from cron and directing their output into the
+                monitored logs (rsyslog).  Programming languages used include Java, Python, Ruby,
+                javascript/jQuery, and unix scripting – bash, korn.  Development environments were primarily
+                IntelliJ or command-line vi, on Mac (Lion), Windows 7, and linux hosts.  Version control was
+                first subversion, later git.  Issue tracking and Agile environment – JIRA/Greenhopper.
+            </div>
+        </div>
+
+        <!-- Job 2 -->
+        <div class="panel-heading" style="padding-top:0; padding-bottom: 6px;">
+            <h5 style="padding-top:0; padding-bottom: 0; margin-top: 0; margin-bottom: 0">
+                <a data-toggle="collapse" data-target="#collapseTwo" >
+                    Software Engineer III at Overwatch Systems (A Textron Systems company) 5/2008 – 5/2011
+                </a>
+            </h5>
+        </div>
+        <div id="collapseTwo" class="panel-collapse collapse">
+            <div class="panel-body" style="padding-top: 0;">
+                As a developer on the DCGS v3.1 multifunction workstation (MFWS) program,
+                provide new features across several areas of the Viper framework application in
+                an Agile development environment. Object-oriented development is primarily done
+                in C# in Visual Studio 2010 (.NET 4.0 Framework) under ClearCase source control.
+                User interfaces were designed with a Model-view-controller (MVC) architecture
+                using either WinForms or the WPF. The underlying database was SQL Server 2005
+                and unit tests used Rhino-Mocks to interface to assemblies that were not actually
+                present on the development platform. Led a team of four developers in a
+                difficult migration of the internal security service from an outdated C++
+                Windows Service to a managed C# WCF service. As an individual contributor, a few
+                of the new features that I added were: integration with the Jericho user
+                authentication and authorization API to their EnterSpace product; conversion
+                from an enumerated single-value security classification to a CAPCO-compliant
+                security marking for entities in the system; ability to export alias lists along
+                with the entities that use those aliases; addition of timezones to dates
+                imported into the system from either Analyst’s Notebook or Excel. When not
+                working a new feature I did problem resolution in any of several areas across
+                the application, documented and tracked with ClearQuest. Much of the work needed
+                was in the areas of MTF messages and XML interoperation with the ACE system.
+                Made multiple trips to the CTSF at Fort Hood, TX and the System Integration
+                Laboratory (SIL) at Ft. Monmouth, NJ to support OWS interoperability test
+                events. On my own initiative, developed a WinForms client adapter that uses
+                reflection to instantly serialize and display the fields of any currently
+                selected entity in the system, in an XML format. This visualization provides a
+                valuable tool for quick analysis of entity to database alignment, and
+                facilitates the design of new interoperability solutions.
+            </div>
+        </div>
+
+        <!-- Job 3 -->
+        <div class="panel-heading" style="padding-top:0; padding-bottom: 6px;">
+            <h5 style="padding-top:0; padding-bottom: 0; margin-top: 0; margin-bottom: 0">
+                <a data-toggle="collapse" data-target="#collapseThree">
+                    Senior Software Engineer at Booz Allen Hamilton    9/2004 – 5/2008
+                </a>
+            </h5>
+        </div>
+        <div id="collapseThree" class="panel-collapse collapse">
+            <div class="panel-body" style="padding-top: 0;">
+                Provided software engineering support to the US Navy at SPAWAR Systems Center,
+                delivering solutions in Java and .NET:
+
+                <div class="panel-group" id="subaccordion">
+                    <div class="panel panel-default">
+
+                        <div class="panel-heading" style="padding-top:0; padding-bottom: 6px;">
+                            <h6 style="padding-top:0; padding-bottom: 0; margin-top: 0; margin-bottom: 0">
+                                <a data-toggle="collapse" data-target="#collapseThreeA">
+                                    Cryptographic Management Workstation (CMW)
+                                </a>
+                            </h6>
+                        </div>
+                        <div id="collapseThreeA" class="panel-collapse collapse">
+                            <div class="panel-body" style="padding-top: 0;">
+                                The CMW project is an ASP.NET 1.1 web application hosted on Windows XP
+                                Server 2003.  It provides authenticated users with account management
+                                capabilities via a web browser, through a seven-tier architecture that provides
+                                access to the Microsoft SQL Server 2000 database.  Development was done in C#
+                                with the Visual Studio .NET 2003 and the SQL Server Enterprise Manager.  Working
+                                closely with the end-user customer to define requirements and refine the
+                                implementation, added new features, new pages and menu options to the web site,
+                                integrating them into the architecture at every layer.  Delivered the final
+                                product and user training to the USSTRATCOM customer at Offutt AFB near Omaha,
+                                NB.  Received a letter of appreciation from the SPAWAR customer after this
+                                assignment.
+                            </div>
+                        </div>
+
+                        <div class="panel-heading" style="padding-top:0; padding-bottom: 6px;">
+                            <h6 style="padding-top:0; padding-bottom: 0; margin-top: 0; margin-bottom: 0">
+                                <a data-toggle="collapse" data-target="#collapseThreeB">
+                                    Combat Direction Finder (CDF) and Cryptographic On-Line Trainer (COLT)
+                                </a>
+                            </h6>
+                        </div>
+                        <div id="collapseThreeB" class="panel-collapse collapse">
+                            <div class="panel-body" style="padding-top: 0;">
+                                For CDF and COLT, performed software maintenance and development in C, C++ and Java, on
+                                both SUN Solaris UNIX and Windows 2000 in a client-server network environment.
+                                These environments were on GCCS-M platforms; developed the software as
+                                installable DIICOE segments.  Noteworthy accomplishments: developed a wrapper
+                                library that bridges a legacy rpc-based api over to the socket-based api for the
+                                new architecture, thereby providing an upgrade path for trainer clients that was
+                                not previously possible; automated (via UNIX scripting) a procedural task that
+                                previously required several hours, now done in under ten minutes; regularly
+                                resolve trouble reports covering issues ranging from user interface enhancements
+                                to resolving messaging problems and memory leaks; developed a new gui tool to
+                                facilitate SYBASE database management tasks specific to the project.  Developed
+                                a ‘radio’ client application in Java that has been described as the ‘best tool
+                                that we have for demonstrating COLT server capabilities’.  Responsibilities
+                                included not only software development and maintenance but system and network
+                                administration of the various (more than 30) workstations on three differently
+                                classified networks.
+                            </div>
+                        </div>
+
+                    </div>
+                </div>
+
+            </div>
+        </div>
+
+        <!-- Job 4 -->
+        <div class="panel-heading" style="padding-top:0; padding-bottom: 6px;">
+            <h5 style="padding-top:0; padding-bottom: 0; margin-top: 0; margin-bottom: 0">
+                <a data-toggle="collapse" data-target="#collapseFour">
+                    Software Engineer – Technical Lead at Ilex Systems (An L3 company)  6/1999 – 9/2004
+                </a>
+            </h5>
+        </div>
+        <div id="collapseFour" class="paXnel-collapse collapse">
+            <div class="panel-body" style="padding-top: 0;">
+                Performed software life cycle maintenance on these DoD systems for the
+                Communications Electronics Command (CECOM) at Fort Huachuca, AZ.  As the team
+                technical lead, provided project management support for these systems while at
+                the same time providing specific software solutions on both the UNIX and Windows
+                platforms, utilizing primarily C, C++ and Java.  Trained and mentored other team
+                members as needed.  Throughout these projects, the teams fluctuated in size
+                between 7 and 29 members, to include software engineers, functional and security
+                testers, and specialists in configuration management, quality assurance and user
+                documentation.  As the technical lead, directed and distributed the workload of
+                the other software engineers as needed to meet release schedules set by CECOM
+                and the system manager, and regularly stood in for the system manager.
+                <br>
+                <b>Specific technical accomplishments include:</b>
+                <ul>
+                    <li>
+                        Added a COM server process to the
+                        ASAS-Light system to parse RECCEXREP messages.  This server interfaces with the
+                        MS Access database as needed to automatically deliver message components that
+                        can be plotted on the map or displayed to the operator/analyst.
+                    </li>
+                    <li>Implemented a C client to a Java based map server.</li>
+                    <li>
+                        Developed Excel spreadsheets on the
+                        Windows 2000 system that can tap into the ORACLE database on demand and display
+                        real-time metric information on a team’s progress in resolving the various
+                        Software Problem Reports (SPRs).  The other teams within the company adopted
+                        these spreadsheets and the system managers use them regularly in their reporting
+                        to the government.
+                    </li>
+                    <li>
+                        System Upgrades – From Solaris 2.5.1 to the 64-bit Solaris
+                        8, from DII-COE 3.2 to 4.6, Windows NT to Windows 2000, from ORACLE 7.3.2 to
+                        8.1.7.4 and various lesser COTS packages and drivers as needed to keep up with
+                        the operating systems and security posture of the systems.
+                    </li>
+                    <li>
+                        UNIX shell scripts
+                        to automate team processes such as baseline file requests and file locking,
+                        integration of changes into the source tree, examination of file differences,
+                        and packaging of solutions into DII-COE segments.
+                    </li>
+                </ul>
+            </div>
+        </div>
+
+
+
+    </div>
+</div>
+

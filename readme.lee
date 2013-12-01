@@ -7,12 +7,25 @@ Upload to heroku (lcware.herokuapp.com):
 2.  heroku run rake db:migrate
 
 
+To get the initial 'projects' pages, did: 
+  rails generate scaffold projects ... (find correct syntax in the tutorial)
+  The command included the definition of two table columns.
 
 What was done to add twitter bootstrap -
 At the rails root, two command-lines:
 ------------------------------------------
 gem install twitter-bootstrap-rails
 rails generate bootstrap:install static
+
+And it appeared to work, to activate/style the nav bar.
+But other things, such as the 'accordion' - not so much.
+So - downloaded a 'dist' version, unzipped it and manually put into
+place the Fonts, two .css files and the bootstrap.js file which
+is the same name as the one that continues on with '.coffee' but
+that one is just a two-liner.  So - not confident that I don't
+have some kind of 'munged' installation, and it is not working
+correctly (yet?) but the additions definitely had effects.
+
 
 
 

@@ -1,10 +1,14 @@
 <!DOCTYPE html>
 <html>
 <head>
-  <title>LC | <%= yield(:title) %></title>
-  <%= stylesheet_link_tag    "application", :media => "all" %>
-  <%= javascript_include_tag "application" %>
-  <%= csrf_meta_tags %>
+    <title>LC | <%= yield(:title) %></title>
+    <%= stylesheet_link_tag    "application", :media => "all" %>
+    <%= javascript_include_tag "application" %>
+    <% unless @suppress_prototype %>
+        <%= javascript_include_tag  "prototype", "balloon.config", "balloon", "box" %>
+    <% end %>
+
+    <%= csrf_meta_tags %>
 </head>
 <body>
 

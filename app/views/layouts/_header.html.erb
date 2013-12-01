@@ -1,3 +1,6 @@
+<style type="text/css">
+</style>
+
 <header class="navbar navbar-fixed-top">
   <div class="navbar-inner">
     <div class="container">
@@ -14,45 +17,14 @@
               <ul class="dropdown-menu" role="menu" aria-labelledby="dropdownMenu">
                   <li><%= link_to "games",      projects_path %>  </li>
                   <li><%= link_to "users",      projects_path %>
-                  <li><%= link_to "invitations", projects_path %>
                   <li><%= link_to "sessions",   projects_path %>
                   <li><%= link_to "states",    projects_path %>
                   <li class="pull-right"><%= link_to "installed",    projects_path %>
                   <li class="pull-right"><%= link_to "homeless",    projects_path %>
               </ul>
 
-          <!-- Games -->
-          <li class="dropdown" style="position:relative">
-              <a href="#"  class="dropdown-toggle" data-toggle="dropdown" >Games <b class="caret"></b></a>
-              <!--suppress HtmlUnknownAttribute -->
-              <ul class="dropdown-menu" role="menu" aria-labelledby="dropdownMenu">
-                  <li><%= link_to "Games",      projects_path %>  </li>
-                  <li><%= link_to "Rovi",      projects_path %>  </li>
-              </ul>
-          </li>
-
-          <!-- Tables -->
-          <li class="dropdown" style="position:relative">
-              <a href="#"  class="dropdown-toggle" data-toggle="dropdown" >Tables <b class="caret"></b></a>
-              <!--suppress HtmlUnknownAttribute -->
-              <ul class="dropdown-menu" role="menu" aria-labelledby="dropdownMenu">
-                  <li><%= link_to "datacenters",     projects_path %>
-                  <li><%= link_to "racks",      projects_path %>  </li>
-                  <li><%= link_to "chassis",    projects_path %>  </li>
-                  <li><%= link_to "blades",     projects_path %>  </li>
-                  <li><%= link_to "gamenodes",  projects_path %>  </li>
-                  <li><%= link_to "mpus",       projects_path %>  </li>
-                  <li><%= link_to "apus",       projects_path %>  </li>
-                  <li><%= link_to "firewalls",     projects_path %>
-                  <li><%= link_to "dumps",     projects_path %>
-                  <li><%= link_to "pupdates",     projects_path %>
-              </ul>
-          </li>
-
-          <li><%= link_to "Invitations",projects_path %>
-          <li><%= link_to "My Logs",    projects_path %></li>
-          <li><%= link_to "Jobs",       projects_path %>
-          <li><%= link_to "Logout", "", :id => 'logout-link' %>
+          <li><%= link_to "Resume",     resume_path %></li>
+          <li><%= link_to "My Blog",    myblog_path %></li>
         </ul>
       </nav>
     </div>

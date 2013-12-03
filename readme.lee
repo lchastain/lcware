@@ -4,7 +4,8 @@ Upload to heroku (lcware.herokuapp.com):
 -------------------------------------------
 0.  Update git, both local and at gitHub  (git push)
 1.  git push heroku master
-2.  heroku run rake db:migrate
+2.  heroku run rake db:migrate  (if there were db changes)
+3.  If any problems - review the logs:  heroku logs
 
 
 To get the initial 'projects' pages, did: 

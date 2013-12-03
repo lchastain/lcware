@@ -1,22 +1,5 @@
 <% provide(:title, 'Resume') %>
 
-<p style="text-align:center;">
-    <span style="font-family:Cursive, serif;font-size:24px;font-style:normal;font-weight:bold;
-            text-decoration:none;text-transform:none;color:#0033CC;">
-        Donald Lee Chastain
-    </span>
-</p>
-<hr style="width:100%; height: 4px; color:#000000; background-color: black" />
-
-<h4>
-    Summary Description
-</h4>
-Accomplished senior software engineer with over 26 years of technical experience, exhibiting strong
-analytical and organizational skills, likes to learn new technologies, takes ownership of assignments
-and drives for results.  A creative and personable team player who has developed solutions in a wide
-range of programming languages, for various operating systems.
-<br>
-<br>
 <!-- Images inside of hidden divs, that may be shown later -->
 <div style="display: none;" id='uop_diploma' >
     <%= image_tag("uop_ms.jpg") %>
@@ -30,9 +13,36 @@ range of programming languages, for various operating systems.
 <div style="display: none;" id='rsc_aa' >
     <%= image_tag("rsc_aa.jpg") %>
 </div>
+<div style="display: none;" id='cmmi_cert' >
+    <%= image_tag("cmmi_cert.jpg") %>
+</div>
+<div style="display: none;" id='cmmi_cert_min' >
+    <%= image_tag("cmmi_cert_25pct.jpg") %>
+</div>
 
+<p style="text-align:center;">
+    <span style="font-family:Cursive, serif;font-size:24px;font-style:normal;font-weight:bold;
+            text-decoration:none;text-transform:none;color:#0033CC;">
+        Donald Lee Chastain
+    </span>
+</p>
+<hr style="width:100%; height: 4px; color:#000000; background-color: black" />
+<!-- Summary -->
+<h4>
+    Summary Description
+</h4>
+Accomplished senior software engineer with over 26 years of technical experience, exhibiting strong
+analytical and organizational skills, likes to learn new technologies, takes ownership of assignments
+and drives for results.  A creative and personable team player who has developed solutions in a wide
+range of programming languages, for various operating systems.
+<br>
+<br>
 <!-- Education -->
-<h4 onmouseover="balloon.showTooltip(event, 'See my bio page for details of earlier course work');">
+<div id="ed_tt" style="display: none">
+    See my bio page for details of earlier course work<br>
+    (To see the full diploma popups, you will need to scroll this line to the top of your screen)
+</div>
+<h4 onmouseover="balloon.showTooltip(event, 'load:ed_tt');">
     Education
 </h4>
 <ul style="margin-bottom: 0; padding-bottom: 0">
@@ -51,28 +61,31 @@ range of programming languages, for various operating systems.
             AA Liberal Arts,
         </span>
         <span onmouseover="balloon.showTooltip(event,
-                'This was `Santa Ana College` when I first started working on these degrees');">
+                'The name was `Santa Ana College` when I first started working on these degrees');">
             Rancho Santiago College, Santa Ana, CA 1987
         </span>
     </li>
 </ul>
-
 <br>
-
 <!-- Experience -->
 <h4 onmouseover="balloon.showTooltip(event, 'Warning - nested accordions ahead.');">
     Experience
 </h4>
-
 <div class="panel-group" id="accordion">
     <div class="panel panel-default">
 
-    <!-- Job 1 -->
+        <!-- Job 1 -->
         <div class="panel-heading" style="padding-top:0; padding-bottom: 6px;">
             <h5 style="padding-top:0; padding-bottom: 0; margin-top: 0; margin-bottom: 0">
                 <a data-toggle="collapse" data-target="#collapseOne">
-                    Senior Software Engineer at Spawn Labs (A GameStop company)    7/2011 – present
+                    Senior Software Engineer
                 </a>
+                <span style="margin-left: 10px; margin-right: 30px;">
+                    Spawn Labs (A GameStop company)
+                </span>
+                <span> <!-- style="position:absolute; left:800px" - this works, but decided against it -->
+                    7/2011 – present
+                </span>
             </h5>
         </div>
         <div id="collapseOne" class="panel-collapse collapse">
@@ -104,8 +117,14 @@ range of programming languages, for various operating systems.
         <div class="panel-heading" style="padding-top:0; padding-bottom: 6px;">
             <h5 style="padding-top:0; padding-bottom: 0; margin-top: 0; margin-bottom: 0">
                 <a data-toggle="collapse" data-target="#collapseTwo" >
-                    Software Engineer III at Overwatch Systems (A Textron Systems company) 5/2008 – 5/2011
+                    Software Engineer III
                 </a>
+                <span style="margin-left: 10px; margin-right: 30px;">
+                    Overwatch Systems (A Textron Systems company)
+                </span>
+                <span>
+                    5/2008 – 5/2011
+                </span>
             </h5>
         </div>
         <div id="collapseTwo" class="panel-collapse collapse">
@@ -143,8 +162,14 @@ range of programming languages, for various operating systems.
         <div class="panel-heading" style="padding-top:0; padding-bottom: 6px;">
             <h5 style="padding-top:0; padding-bottom: 0; margin-top: 0; margin-bottom: 0">
                 <a data-toggle="collapse" data-target="#collapseThree">
-                    Senior Software Engineer at Booz Allen Hamilton    9/2004 – 5/2008
+                    Senior Software Engineer
                 </a>
+                <span style="margin-left: 10px; margin-right: 30px;">
+                    Booz Allen Hamilton
+                </span>
+                <span>
+                    9/2004 – 5/2008
+                </span>
             </h5>
         </div>
         <div id="collapseThree" class="panel-collapse collapse">
@@ -216,8 +241,14 @@ range of programming languages, for various operating systems.
         <div class="panel-heading" style="padding-top:0; padding-bottom: 6px;">
             <h5 style="padding-top:0; padding-bottom: 0; margin-top: 0; margin-bottom: 0">
                 <a data-toggle="collapse" data-target="#collapseFour">
-                    Software Engineer – Technical Lead at Ilex Systems (An L3 company)  6/1999 – 9/2004
+                    Software Engineer – Technical Lead
                 </a>
+                <span style="margin-left: 10px; margin-right: 30px;">
+                    Ilex Systems (An L3 company)
+                </span>
+                <span>
+                    6/1999 – 9/2004
+                </span>
             </h5>
         </div>
         <div id="collapseFour" class="paXnel-collapse collapse">
@@ -267,8 +298,203 @@ range of programming languages, for various operating systems.
             </div>
         </div>
 
+        <!-- Job 5 -->
+        <div class="panel-heading" style="padding-top:0; padding-bottom: 6px;">
+            <h5 style="padding-top:0; padding-bottom: 0; margin-top: 0; margin-bottom: 0">
+                <a data-toggle="collapse" data-target="#collapseFive">
+                    Software Engineer
+                </a>
+                <span style="margin-left: 10px; margin-right: 30px;">
+                    Science Applications International Corporation (SAIC)
+                </span>
+                <span>
+                    3/1996 – 6/1999
+                </span>
+            </h5>
+        </div>
+        <div id="collapseFive" class="panel-collapse collapse">
+            <div class="panel-body" style="padding-top: 0;">
+                Object-oriented software development and
+                software engineering using Java, C, C++ and AIE for applications on UNIX and
+                Windows operating systems.  Performed UNIX system administration and network
+                support as needed.  Provided the division manager with technical input related
+                to proposals, statements of work, schedules, and capabilities. Provided guidance
+                and training to the technical staff.  Added new functionality to the IEW
+                Synchronization Matrix (ISM), a graphical C4I software application which
+                provides a visualization of various battlefield operating systems entities and
+                their relationships to each other in time and space. The ISM incorporates
+                several aspects of Collection Management, Requirements Definition, and Asset
+                Management. This application was originally done solely for the Army in AIE and
+                C, later expanded to all branches of the military and converted to Java for more
+                flexibility and platform independence.  Led the conversion to Java (an effort
+                that lasted one year and involved six other developers), and wrote an AIE to
+                Java translator (in Java) that was central to the conversion. The conversion to
+                Java was an initial step towards integrating into the JCMT workstation; had
+                previously integrated the AIE version into ASAS RWS.
+            </div>
+        </div>
 
+        <!-- Job 6 -->
+        <div class="panel-heading" style="padding-top:0; padding-bottom: 6px;">
+            <h5 style="padding-top:0; padding-bottom: 0; margin-top: 0; margin-bottom: 0">
+                <a data-toggle="collapse" data-target="#collapseSix">
+                    Senior Systems Analyst
+                </a>
+                <span style="margin-left: 10px; margin-right: 30px;">
+                    PARANET
+                </span>
+                <span>
+                    2/1995 – 3/1996
+                </span>
+            </h5>
+        </div>
+        <div id="collapseSix" class="panel-collapse collapse">
+            <div class="panel-body" style="padding-top: 0;">
+                Worked at various customer sites in Tucson, Phoenix, and Fort Huachuca to help
+                establish a southern Arizona branch for Paranet, a Houston-based company that
+                provided a wide variety of technical expertise for customers that need to
+                outsource some or all of their information systems requirements. Customer sites
+                worked: Burr-Brown, Motorola, Charles Schwab, Hughes, Allied Signal, Southwest
+                Gas, University of Arizona, Intuit. Tasks included UNIX system and network
+                administration, configuration, integration, troubleshooting, and documentation,
+                and lasted anywhere from a few hours to several months at any given site. Worked
+                alone in most cases, but occasionally participated as part of a team of 3 to 10
+                personnel at the customer site, for larger projects. As part of a cooperative
+                agreement between Paranet and SUN, acted as an on-call service representative
+                for SUN Solaris installations and trouble calls in Tucson and on Fort Huachuca.
+            </div>
+        </div>
+
+        <!-- Job 7 -->
+        <div class="panel-heading" style="padding-top:0; padding-bottom: 6px;">
+            <h5 style="padding-top:0; padding-bottom: 0; margin-top: 0; margin-bottom: 0">
+                <a data-toggle="collapse" data-target="#collapseSeven">
+                    Computer Scientist
+                </a>
+                <span style="margin-left: 10px; margin-right: 30px;">
+                    TRW / Sierra Cybernetics
+                </span>
+                <span>
+                    4/1992 – 2/1995
+                </span>
+            </h5>
+        </div>
+        <div id="collapseSeven" class="panel-collapse collapse">
+            <div class="panel-body" style="padding-top: 0;">
+                At the US GOSIP Open Systems Environment Testing Laboratory, regularly assessed
+                FTAM and MHS products for correct testing of their underlying protocols
+                (SESSION, PRESENTATION, ACSE) by test labs, as a prerequisite to being placed on
+                the US GOSIP register of OSI conformant products.  Automated routine tasks such
+                as test analysis and report generation, using Borland C and the Object Window
+                Library (OWL).  Later worked with TELNET and SMTP protocols in the TCP/IP stack,
+                and made a presentation on the lab’s standards conformance testing and the JITC
+                registry to the Internet Engineering Task Force (IETF) during their meeting in
+                Toronto, Jul 94.  Switched to Sierra Cybernetics in February of 1994 in order to
+                retain this position when TRW left the INTEROP contract.
+            </div>
+        </div>
+
+        <!-- Job 8 -->
+        <div class="panel-heading" style="padding-top:0; padding-bottom: 6px;">
+            <h5 style="padding-top:0; padding-bottom: 0; margin-top: 0; margin-bottom: 0">
+                <a data-toggle="collapse" data-target="#collapseEight">
+                    Electronics Technician – Software Engineer
+                </a>
+                <span style="margin-left: 10px; margin-right: 30px;">
+                    TRW
+                </span>
+                <span>
+                    10/1984 – 4/1992
+                </span>
+            </h5>
+        </div>
+        <div id="collapseEight" class="panel-collapse collapse">
+            <div class="panel-body" style="padding-top: 0;">
+                Started with calibration and repair of general-purpose test equipment, then
+                quickly learned the HP instrument control programming language (RMB), and began
+                automating the calibration test procedures.  Was eventually shifted to the
+                engineering department to oversee that work (in advance of getting my degree)
+                and then also became the system and network administrator for approximately 100
+                workstations, while attending Cal State Long Beach in the evenings. Was promoted
+                to software engineer several months ahead of graduation.  Using C and UNIX ksh
+                scripts, automated several systems including the configuration management
+                software release process, purchase requests, and engineering problem reports.
+                Completed all programming work, including documentation and training, for the
+                Electronic Paperless Interactive Calibration system, which took local
+                calibration data and entered it into a remote ORACLE database for equipment
+                status tracking.  Transferred to the INTEROP project at the JITC, Fort Huachuca
+                AZ in April of 1992.
+            </div>
+        </div>
+
+        <!-- Job 9 -->
+        <div class="panel-heading" style="padding-top:0; padding-bottom: 6px;">
+            <h5 style="padding-top:0; padding-bottom: 0; margin-top: 0; margin-bottom: 0">
+                <a data-toggle="collapse" data-target="#collapseNine">
+                    Electronics Technician
+                </a>
+                <span style="margin-left: 10px; margin-right: 30px;">
+                    Tektronix
+                </span>
+                <span>
+                    3/1983 – 10/1984
+                </span>
+            </h5>
+        </div>
+        <div id="collapseNine" class="panel-collapse collapse">
+            <div class="panel-body" style="padding-top: 0;">
+                Calibration and component-level repair of the 7K line of laboratory
+                oscilloscopes and the TM-500 series of general purpose test modules such as
+                signal generators and frequency counters, digital voltmeters, and the timing
+                generator. Expanded into the remotely controllable TM-5000 series and wrote
+                automated test procedures on the TEK-4052 graphics controller and the 4041
+                instrument controller.  I left this company when I accepted a position with TRW
+                at the request of a manager there who had previously led my team at Tektronix.
+            </div>
+        </div>
+
+        <!-- Job 10 -->
+        <div class="panel-heading" style="padding-top:0; padding-bottom: 6px;">
+            <h5 style="padding-top:0; padding-bottom: 0; margin-top: 0; margin-bottom: 0">
+                <a data-toggle="collapse" data-target="#collapseTen">
+                    Electronics Technician, 2nd Class (E5)
+                </a>
+                <span style="margin-left: 10px; margin-right: 30px;">
+                    United States Navy
+                </span>
+                <span>
+                    3/1980 – 3/1986
+                </span>
+            </h5>
+        </div>
+        <div id="collapseTen" class="panel-collapse collapse">
+            <div class="panel-body" style="padding-top: 0;">
+                Graduated first in class of Electronics Technician 'A' school, was then assigned
+                to the guided missile destroyer USS Berkeley DDG-15.  Performed operation,
+                calibration, and repair of transceivers in the VHF to UHF ranges and various
+                related equipment such as antennas and signal switchboards.  After three years
+                active duty, converted to active reserves in 1983, serving at the Ship's
+                Intermediate Maintenance Activity (SIMA) in Long Beach, California, with
+                honorable discharge in 1986.
+            </div>
+        </div>
 
     </div>
 </div>
+<br>
 
+<!-- Sampling of Additional Professional Training -->
+<h4>
+    Sampling of Additional Professional Training
+</h4>
+<ul style="margin-bottom: 0; padding-bottom: 0">
+    <li onmouseover="balloon.showTooltip(event, 'load:cmmi_cert');">
+        SEI - Introduction to CMMI				Oct 2007
+    </li>
+    <li onmouseover="balloon.showTooltip(event, 'load:cmmi_cert_min');">
+        MicroSoft – Programming SQL Server 2000 	Jan 2004
+    </li>
+</ul>
+<br>
+
+<%= image_tag("dcgs_coin.png") %>

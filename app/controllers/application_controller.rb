@@ -9,4 +9,8 @@ class ApplicationController < ActionController::Base
     render "layouts/myblog"
   end
 
+  def get_word_resume
+    send_file 'public/resume_LChastain.doc', :type=>"application/msword"
+  end
+
 end

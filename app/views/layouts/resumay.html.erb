@@ -2,30 +2,35 @@
 
 <!-- Images inside of hidden divs, that may be shown later -->
 <div style="display: none;" id='uop_diploma' >
-    <%= image_tag("uop_ms.jpg") %>
+    <%= image_tag('uop_ms.jpg') %>
 </div>
 <div style="display: none;" id='csulb_diploma' >
-    <%= image_tag("csulb_bs.jpg") %>
+    <%= image_tag('csulb_bs.jpg') %>
 </div>
 <div style="display: none;" id='rsc_as' >
-    <%= image_tag("rsc_as.jpg") %>
+    <%= image_tag('rsc_as.jpg') %>
 </div>
 <div style="display: none;" id='rsc_aa' >
     <%= image_tag("rsc_aa.jpg") %>
 </div>
 <div style="display: none;" id='cmmi_cert' >
-    <%= image_tag("cmmi_cert.jpg") %>
+    <%= image_tag('cmmi_cert.jpg') %>
 </div>
-<div style="display: none;" id='cmmi_cert_min' >
-    <%= image_tag("cmmi_cert_25pct.jpg") %>
+<div style="display: none;" id='sql_server_cert' >
+    <%= image_tag('sql_server2000_cert.jpg') %>
 </div>
 
 <p style="text-align:center;">
+    <%= link_to "Word (.doc) version", get_word_resume_path,
+                :class => 'btn session_button btn-info',
+                :style => 'color:black; font-weight:bold; float:left'
+    %>
     <span style="font-family:Cursive, serif;font-size:24px;font-style:normal;font-weight:bold;
-            text-decoration:none;text-transform:none;color:#0033CC;">
+            text-decoration:none;text-transform:none;color:#0033CC; margin-left: -200px">
         Donald Lee Chastain
     </span>
 </p>
+
 <hr style="width:100%; height: 4px; color:#000000; background-color: black" />
 <!-- Summary -->
 <h4>
@@ -491,7 +496,7 @@ range of programming languages, for various operating systems.
     <li onmouseover="balloon.showTooltip(event, 'load:cmmi_cert');">
         SEI - Introduction to CMMI				Oct 2007
     </li>
-    <li onmouseover="balloon.showTooltip(event, 'load:cmmi_cert_min');">
+    <li onmouseover="balloon.showTooltip(event, 'load:sql_server_cert');">
         MicroSoft – Programming SQL Server 2000 	Jan 2004
     </li>
 </ul>

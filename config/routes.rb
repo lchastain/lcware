@@ -61,7 +61,8 @@ Lcware::Application.routes.draw do
 
   root to: 'projects#index'
 
-  match '/resume',      to: 'application#resumay'
-  match '/myblog',      to: 'application#myblog'
+  match '/resume',          to: 'application#resumay'
+  match '/myblog',          to: 'application#myblog'
+  match '/get_word_resume', to: 'application#get_word_resume'
 
 end

@@ -64,5 +64,6 @@ Lcware::Application.routes.draw do
   match '/resume',          to: 'application#resumay'
   match '/myblog',          to: 'application#myblog'
   match '/get_word_resume', to: 'application#get_word_resume'
+  match '/fpg',             to: 'application#fpg'
 
 end

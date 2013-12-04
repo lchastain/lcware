@@ -1,5 +1,6 @@
 <% provide(:title, 'Resume') %>
 
+<!-- Initialize the popup balloon -->
 <script type="text/javascript">
     // Initialization of the popup tooltip container - white balloon with default configuration.
     var balloon = new Balloon();
@@ -63,13 +64,41 @@
 <div style="display: none;" id='usnavy_logo' >
     <%= image_tag('usnavy_logo.png') %>
 </div>
+<div style="display: none;" id='xml_cert' >
+    <%= image_tag('xml_cert.jpg') %>
+</div>
+<div style="display: none;" id='ado_asp_cert' >
+    <%= image_tag('ado_asp_cert.jpg') %>
+</div>
+<div style="display: none;" id='vb_dev_cert' >
+    <%= image_tag('vb_dev_cert.jpg') %>
+</div>
+<div style="display: none;" id='intro_c#_cert' >
+    <%= image_tag('intro_csharp_cert.jpg') %>
+</div>
+<div style="display: none;" id='oracle_cert' >
+    <%= image_tag('oracle_cert.jpg') %>
+</div>
+<div style="display: none;" id='dcgs_coin' >
+    <%= image_tag('dcgs_coin.png') %>
+</div>
+<div style="display: none;" id='mcp_cert' >
+    <%= image_tag('mcp_cert.jpg') %>
+</div>
+<div style="display: none;" id='ilex_cert1' >
+    <%= image_tag('ilex_cert1.jpg') %>
+</div>
+<div style="display: none;" id='challenge_book' >
+    <%= image_tag('challenge_book.jpg') %>
+</div>
 
+<!-- Download button, Name, Link to GitHub -->
 <p style="text-align:center;">
     <%= link_to 'Word (.doc) version', '/get_word_resume',
                 :class => 'btn btn-info btn-small',
                 :style => 'color:black; font-weight:bold; float:left'
     %>
-    <span style="font-family:Cursive, serif;font-size:24px;font-style:normal;font-weight:bold;
+    <span style="font-family:Cursive, serif;font-size:36px;font-style:normal;font-weight:bold;
             text-decoration:none;text-transform:none;color:#0033CC; margin-left: -160px">
         Donald Lee Chastain
     </span>
@@ -78,7 +107,6 @@
         My GitHub
     </a>
 </p>
-
 <hr style="width:100%; height: 4px; color:#000000; background-color: black" />
 <!-- Summary -->
 <h4>
@@ -99,18 +127,22 @@ range of programming languages, for various operating systems.
     Education
 </h4>
 <ul style="margin-bottom: 0; padding-bottom: 0">
-    <li onmouseover="balloon.showTooltip(event, 'load:uop_diploma');">
+    <li onmouseover="balloon.showTooltip(event, 'load:uop_diploma');"
+        onclick="location.href='/fpg?grafik=uop_ms.jpg';">
         MS Computer Information Systems, University of Phoenix - Tucson, AZ 1996
     </li>
-    <li onmouseover="balloon.showTooltip(event, 'load:csulb_diploma');">
+    <li onmouseover="balloon.showTooltip(event, 'load:csulb_diploma');"
+        onclick="location.href='/fpg?grafik=csulb_bs.jpg';">
         BS Computer Science and Mathematics, California State University Long Beach, CA 1990
     </li>
     <li>
-        <span onmouseover="balloon.showTooltip(event, 'load:rsc_as');">
+        <span onmouseover="balloon.showTooltip(event, 'load:rsc_as');"
+            onclick="location.href='/fpg?grafik=rsc_as.jpg';">
             AS Math
         </span>
         &
-        <span onmouseover="balloon.showTooltip(event, 'load:rsc_aa');">
+        <span onmouseover="balloon.showTooltip(event, 'load:rsc_aa');"
+            onclick="location.href='/fpg?grafik=rsc_aa.jpg';">
             AA Liberal Arts,
         </span>
         <span onmouseover="balloon.showTooltip(event,
@@ -563,20 +595,69 @@ range of programming languages, for various operating systems.
 
 <!-- Sampling of Additional Professional Training -->
 <div id="training_tt" style="display: none">
-    I know, a lot of this training was too far back to be impressive.  The real take-away is that
-    I now have years of experience that has been built upon solid foundations.
+    I know, a lot of this training was too far back to be impressive now.
+    The real take-away is that since then I have built years of experience on solid foundations.
 </div>
 <h4 onmouseover="balloon.showTooltip(event, 'load:training_tt');">
     Sampling of Additional Professional Training
 </h4>
 <ul style="margin-bottom: 0; padding-bottom: 0">
-    <li onmouseover="balloon.showTooltip(event, 'load:cmmi_cert');">
+    <li onmouseover="balloon.showTooltip(event, 'load:cmmi_cert');"
+        onclick="location.href='/fpg?grafik=cmmi_cert.jpg';">
         SEI - Introduction to CMMI				Oct 2007
     </li>
-    <li onmouseover="balloon.showTooltip(event, 'load:sql_server_cert');">
+    <li onmouseover="balloon.showTooltip(event, 'load:sql_server_cert');"
+        onclick="location.href='/fpg?grafik=sql_server2000_cert.jpg';">
         MicroSoft – Programming SQL Server 2000 	Jan 2004
+    </li>
+    <li onmouseover="balloon.showTooltip(event, 'load:xml_cert');"
+        onclick="location.href='/fpg?grafik=xml_cert.jpg';">
+        MicroSoft – Programming with XML in .NET 	Nov. 2003
+    </li>
+    <li onmouseover="balloon.showTooltip(event, 'load:ado_asp_cert');"
+        onclick="location.href='/fpg?grafik=ado_asp_cert.jpg';">
+        MicroSoft – Developing with ADO.NET and ASP.NET	Oct. 2003
+    </li>
+    <li onmouseover="balloon.showTooltip(event, 'load:vb_dev_cert');"
+        onclick="location.href='/fpg?grafik=vb_dev_cert.jpg';">
+        MicroSoft – Visual Basic .NET	Sept. 2003
+    </li>
+    <li onmouseover="balloon.showTooltip(event, 'load:intro_c#_cert');"
+        onclick="location.href='/fpg?grafik=intro_csharp_cert.jpg';">
+        MicroSoft – Introduction to C#  	July 2003
+    </li>
+    <li onmouseover="balloon.showTooltip(event, 'load:oracle_cert');"
+        onclick="location.href='/fpg?grafik=oracle_cert.jpg';">
+        Oracle – SQL and PL/SQL	Oct. 1999
     </li>
 </ul>
 <br>
 
-<%= image_tag('dcgs_coin.png') %>
+<!-- Certificates and Awards -->
+<h4>
+    Certificates and Awards
+</h4>
+<ul style="margin-bottom: 0; padding-bottom: 0">
+    <li onmouseover="balloon.showTooltip(event, 'load:dcgs_coin');"
+        onclick="location.href='/fpg?grafik=dcgs_coin.png';">
+        March 2009:  DCGS-A Coin of Excellence for outstanding support of the warfighter
+    </li>
+    <li onmouseover="balloon.showTooltip(event, 'load:mcp_cert');"
+        onclick="location.href='/fpg?grafik=mcp_cert.jpg';">
+        February 2004:  Microsoft Certified Professional
+    </li>
+    <li onmouseover="balloon.showTooltip(event, 'load:ilex_cert1');"
+        onclick="location.href='/fpg?grafik=ilex_cert1.jpg';">
+        August 1999: Certificate of appreciation for the development of a Java application
+        to quickly search candidate resumes and report the count of user-specified keywords
+        such as   Java  , UNIX, C, C++, DII-COE, etc.
+    </li>
+    <li onmouseover="balloon.showTooltip(event, 'load:challenge_book');"
+        onclick="location.href='/fpg?grafik=challenge_book.jpg';">
+        April 1994: Won the cryptographic challenge contest from the book,
+        "Top Secret Data Encryption Techniques" from SAM'S Publishing.
+    </li>
+</ul>
+
+<!-- Make some room at the bottom.  -->
+<div style="height: 100px;"></div>

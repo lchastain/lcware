@@ -31,14 +31,3 @@
     </div>
   </div>
 </header>
-
-<% unless @suppress_prototype %>
-    <!-- Some pages use 3rd-party jQuery plugins that are not compatible with prototype -->
-    <script type="text/javascript">
-        // white balloon with default configuration
-        // (see http://www.wormbase.org/wiki/Balloon_Tooltips)
-
-        // Initialization of the popup tooltip container, for all (other) pages.
-        var balloon = new Balloon();
-    </script>
-<% end %>

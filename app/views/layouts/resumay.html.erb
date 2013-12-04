@@ -1,5 +1,10 @@
 <% provide(:title, 'Resume') %>
 
+<script type="text/javascript">
+    // Initialization of the popup tooltip container - white balloon with default configuration.
+    var balloon = new Balloon();
+</script>
+
 <!-- Images inside of hidden divs, that may be shown later -->
 <div style="display: none;" id='uop_diploma' >
     <%= image_tag('uop_ms.jpg') %>
@@ -11,7 +16,7 @@
     <%= image_tag('rsc_as.jpg') %>
 </div>
 <div style="display: none;" id='rsc_aa' >
-    <%= image_tag("rsc_aa.jpg") %>
+    <%= image_tag('rsc_aa.jpg') %>
 </div>
 <div style="display: none;" id='cmmi_cert' >
     <%= image_tag('cmmi_cert.jpg') %>
@@ -60,7 +65,7 @@
 </div>
 
 <p style="text-align:center;">
-    <%= link_to "Word (.doc) version", get_word_resume_path,
+    <%= link_to 'Word (.doc) version', '/get_word_resume',
                 :class => 'btn btn-info btn-small',
                 :style => 'color:black; font-weight:bold; float:left'
     %>
@@ -574,4 +579,4 @@ range of programming languages, for various operating systems.
 </ul>
 <br>
 
-<%= image_tag("dcgs_coin.png") %>
+<%= image_tag('dcgs_coin.png') %>

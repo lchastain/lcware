@@ -19,16 +19,59 @@
 <div style="display: none;" id='sql_server_cert' >
     <%= image_tag('sql_server2000_cert.jpg') %>
 </div>
+<div style="display: none;" id='spawn_logo' >
+    <%= image_tag('spawn_logo.jpg') %>
+</div>
+<div style="display: none;" id='gs_logo' >
+    <%= image_tag('gs_logo.png') %>
+</div>
+<div style="display: none;" id='overwatch_logo' >
+    <%= image_tag('overwatch-logo.jpg') %>
+</div>
+<div style="display: none;" id='textron_logo' >
+    <%= image_tag('textron_systems_logo.jpg') %>
+</div>
+<div style="display: none;" id='bah_logo' >
+    <%= image_tag('bah_logo.jpg') %>
+</div>
+<div style="display: none;" id='l3_logo' >
+    <%= image_tag('l3_logo.jpg') %>
+</div>
+<div style="display: none;" id='saic_logo' >
+    <%= image_tag('saic_logo.jpg') %>
+</div>
+<div style="display: none;" id='paranet_logo' >
+    <%= image_tag('paranet_logo.jpg') %>
+</div>
+<div style="display: none;" id='sierra_cybernetics_logo' >
+    <%= image_tag('sierra_cybernetics_logo.jpg') %>
+</div>
+<div style="display: none;" id='interop_logo' >
+    <%= image_tag('interop_logo.jpg') %>
+</div>
+<div style="display: none;" id='trw_logo' >
+    <%= image_tag('trw_logo.png') %>
+</div>
+<div style="display: none;" id='tektronix_logo' >
+    <%= image_tag('tektronix_logo.jpg') %>
+</div>
+<div style="display: none;" id='usnavy_logo' >
+    <%= image_tag('usnavy_logo.png') %>
+</div>
 
 <p style="text-align:center;">
     <%= link_to "Word (.doc) version", get_word_resume_path,
-                :class => 'btn session_button btn-info',
+                :class => 'btn btn-info btn-small',
                 :style => 'color:black; font-weight:bold; float:left'
     %>
     <span style="font-family:Cursive, serif;font-size:24px;font-style:normal;font-weight:bold;
-            text-decoration:none;text-transform:none;color:#0033CC; margin-left: -200px">
+            text-decoration:none;text-transform:none;color:#0033CC; margin-left: -160px">
         Donald Lee Chastain
     </span>
+    <a href='https://github.com/lchastain' class="btn btn-info btn-small"
+       style="font-weight:bold; float: right">
+        My GitHub
+    </a>
 </p>
 
 <hr style="width:100%; height: 4px; color:#000000; background-color: black" />
@@ -86,7 +129,12 @@ range of programming languages, for various operating systems.
                     Senior Software Engineer
                 </a>
                 <span style="margin-left: 10px; margin-right: 30px;">
-                    Spawn Labs (A GameStop company)
+                    <span onmouseover="balloon.showTooltip(event, 'load:spawn_logo');">
+                        Spawn Labs
+                    </span>
+                    <span onmouseover="balloon.showTooltip(event, 'load:gs_logo');">
+                       (A GameStop company)
+                    </span>
                 </span>
                 <span> <!-- style="position:absolute; left:800px" - this works, but decided against it -->
                     7/2011 – present
@@ -125,7 +173,12 @@ range of programming languages, for various operating systems.
                     Software Engineer III
                 </a>
                 <span style="margin-left: 10px; margin-right: 30px;">
-                    Overwatch Systems (A Textron Systems company)
+                    <span onmouseover="balloon.showTooltip(event, 'load:overwatch_logo');">
+                        Overwatch Systems
+                    </span>
+                    <span onmouseover="balloon.showTooltip(event, 'load:textron_logo');">
+                       (A Textron Systems company)
+                    </span>
                 </span>
                 <span>
                     5/2008 – 5/2011
@@ -169,7 +222,8 @@ range of programming languages, for various operating systems.
                 <a data-toggle="collapse" data-target="#collapseThree">
                     Senior Software Engineer
                 </a>
-                <span style="margin-left: 10px; margin-right: 30px;">
+                <span style="margin-left: 10px; margin-right: 30px;"
+                      onmouseover="balloon.showTooltip(event, 'load:bah_logo');">
                     Booz Allen Hamilton
                 </span>
                 <span>
@@ -248,7 +302,8 @@ range of programming languages, for various operating systems.
                 <a data-toggle="collapse" data-target="#collapseFour">
                     Software Engineer – Technical Lead
                 </a>
-                <span style="margin-left: 10px; margin-right: 30px;">
+                <span style="margin-left: 10px; margin-right: 30px;"
+                      onmouseover="balloon.showTooltip(event, 'load:l3_logo');">
                     Ilex Systems (An L3 company)
                 </span>
                 <span>
@@ -309,7 +364,8 @@ range of programming languages, for various operating systems.
                 <a data-toggle="collapse" data-target="#collapseFive">
                     Software Engineer
                 </a>
-                <span style="margin-left: 10px; margin-right: 30px;">
+                <span style="margin-left: 10px; margin-right: 30px;"
+                      onmouseover="balloon.showTooltip(event, 'load:saic_logo');">
                     Science Applications International Corporation (SAIC)
                 </span>
                 <span>
@@ -343,9 +399,10 @@ range of programming languages, for various operating systems.
         <div class="panel-heading" style="padding-top:0; padding-bottom: 6px;">
             <h5 style="padding-top:0; padding-bottom: 0; margin-top: 0; margin-bottom: 0">
                 <a data-toggle="collapse" data-target="#collapseSix">
-                    Senior Systems Analyst
+                    Senior UNIX Architect
                 </a>
-                <span style="margin-left: 10px; margin-right: 30px;">
+                <span style="margin-left: 10px; margin-right: 30px;"
+                      onmouseover="balloon.showTooltip(event, 'load:paranet_logo');">
                     PARANET
                 </span>
                 <span>
@@ -377,7 +434,13 @@ range of programming languages, for various operating systems.
                     Computer Scientist
                 </a>
                 <span style="margin-left: 10px; margin-right: 30px;">
-                    TRW / Sierra Cybernetics
+                    <span onmouseover="balloon.showTooltip(event, 'load:sierra_cybernetics_logo');">
+                    Sierra Cybernetics
+                    </span>
+                    /
+                    <span onmouseover="balloon.showTooltip(event, 'load:trw_logo');">
+                        TRW
+                    </span>
                 </span>
                 <span>
                     4/1992 – 2/1995
@@ -395,7 +458,9 @@ range of programming languages, for various operating systems.
                 and made a presentation on the lab’s standards conformance testing and the JITC
                 registry to the Internet Engineering Task Force (IETF) during their meeting in
                 Toronto, Jul 94.  Switched to Sierra Cybernetics in February of 1994 in order to
-                retain this position when TRW left the INTEROP contract.
+                retain this position when TRW left the
+                <span onmouseover="balloon.showTooltip(event, 'load:interop_logo');">INTEROP</span>
+                contract.
             </div>
         </div>
 
@@ -405,7 +470,8 @@ range of programming languages, for various operating systems.
                 <a data-toggle="collapse" data-target="#collapseEight">
                     Electronics Technician – Software Engineer
                 </a>
-                <span style="margin-left: 10px; margin-right: 30px;">
+                <span style="margin-left: 10px; margin-right: 30px;"
+                      onmouseover="balloon.showTooltip(event, 'load:trw_logo');">
                     TRW
                 </span>
                 <span>
@@ -438,7 +504,8 @@ range of programming languages, for various operating systems.
                 <a data-toggle="collapse" data-target="#collapseNine">
                     Electronics Technician
                 </a>
-                <span style="margin-left: 10px; margin-right: 30px;">
+                <span style="margin-left: 10px; margin-right: 30px;"
+                      onmouseover="balloon.showTooltip(event, 'load:tektronix_logo');">
                     Tektronix
                 </span>
                 <span>
@@ -464,7 +531,8 @@ range of programming languages, for various operating systems.
                 <a data-toggle="collapse" data-target="#collapseTen">
                     Electronics Technician, 2nd Class (E5)
                 </a>
-                <span style="margin-left: 10px; margin-right: 30px;">
+                <span style="margin-left: 10px; margin-right: 30px;"
+                      onmouseover="balloon.showTooltip(event, 'load:usnavy_logo');">
                     United States Navy
                 </span>
                 <span>
@@ -489,7 +557,11 @@ range of programming languages, for various operating systems.
 <br>
 
 <!-- Sampling of Additional Professional Training -->
-<h4>
+<div id="training_tt" style="display: none">
+    I know, a lot of this training was too far back to be impressive.  The real take-away is that
+    I now have years of experience that has been built upon solid foundations.
+</div>
+<h4 onmouseover="balloon.showTooltip(event, 'load:training_tt');">
     Sampling of Additional Professional Training
 </h4>
 <ul style="margin-bottom: 0; padding-bottom: 0">

@@ -59,11 +59,13 @@ Lcware::Application.routes.draw do
   # Note: This route will make all actions in every controller accessible via GET requests.
   # match ':controller(/:action(/:id))(.:format)'
 
-  root to: 'projects#index'
+  root to: 'application#home'
 
+  match '/home',            to: 'application#home'
   match '/resume',          to: 'application#resumay'
   match '/myblog',          to: 'application#myblog'
   match '/get_word_resume', to: 'application#get_word_resume'
+  match '/bio',             to: 'application#bio'
   match '/fpg',             to: 'application#fpg'
 
 end

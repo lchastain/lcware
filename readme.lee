@@ -1,13 +1,44 @@
 Common development operations:
 
 Upload to heroku (lcware.herokuapp.com):
--------------------------------------------
+(site dev work can go thru IJ but git/heroku is command-line)
+------------------------------------------------------------------------------------
 0.  Update git, both local and at gitHub  (git push)
 1.  git push heroku master
 2.  heroku run rake db:migrate  (if there were db changes)
 3.  If any problems - review the logs:  heroku logs
 
+UPDATE 10/16/2017:
+Wanting to lower my online visibility, started a resume update but in pushing it to heroku (step 1, above),
+things not working due to out-of-date.  Updated heroku CLI and git (from v1.8.0).
+	heroku-cli/6.14.34-1fcf80e (windows-x86) node-v8.6.0 (heroku update alone not enough to do it all; needed reinstall)
+	git 2.14.2.3
+Also - ssh keys out of date.  Run 'heroku keys' with various additional flags (google online docs, if needed)
+After that, push started to work but - 'Cedar-10 is deprecated. Please update to Cedar-14'
+  heroku stack:set cedar-14 -a lcware
+Then - the push worked, with a number of warnings.
 
+But also had forgotten all about rails - needed to start again almost from scratch.  The push alone did not udate
+heroku; needed to regenerate the rails site.  Meanwhile, in the last few years I had removed postgres - needed.
+Did reinstall of that, for a Win 10 OS:
+user:  postgres
+pass:  admin
+
+To get a DB prompt (windows was already running the server, after installation):
+ psql -U postgres
+
+Then:
+  create database lcware;
+
+Then:
+  rails server   - worked.
+
+Then:
+  surf to localhost:3000 - worked, to show the same view as remote - ie, no update yet.
+
+
+
+=================================================================================================
 To get the initial 'projects' pages, did: 
   rails generate scaffold projects ... (find correct syntax in the tutorial)
   The command included the definition of two table columns.
